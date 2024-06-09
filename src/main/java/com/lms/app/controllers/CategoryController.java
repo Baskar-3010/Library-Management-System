@@ -20,8 +20,12 @@ import com.lms.app.payload.CategoryDTO;
 import com.lms.app.service.BookService;
 import com.lms.app.service.CategoryService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
+
 @RestController
 @RequestMapping("/category")
+@SecurityRequirement(name = "bearerAuth")
 public class CategoryController {
 
 	@Autowired

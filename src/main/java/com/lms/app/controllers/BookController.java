@@ -24,8 +24,11 @@ import com.lms.app.payload.BookDTO;
 import com.lms.app.service.AuthorService;
 import com.lms.app.service.BookService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 @RestController
 @RequestMapping("/books")
+@SecurityRequirement(name = "bearerAuth")
 public class BookController {
 
 	@Autowired

@@ -17,8 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lms.app.payload.AuthorDTO;
 import com.lms.app.service.AuthorService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 @RestController
 @RequestMapping("/authors")
+@SecurityRequirement(name = "bearerAuth")
 public class AuthorController {
 
 	@Autowired
